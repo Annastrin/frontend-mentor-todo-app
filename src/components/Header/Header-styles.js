@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { colors } from '../app/app-styles';
+import { colors } from '../App/App-styles';
 
 export const header = css`
   display: flex;

@@ -1,8 +1,4 @@
 import { css } from '@emotion/react';
-import bgDesktopLight from './images/bg-desktop-light.jpg';
-import bgMobileLight from './images/bg-mobile-light.jpg';
-import bgDesktopDark from './images/bg-desktop-dark.jpg';
-import bgMobileDark from './images/bg-mobile-dark.jpg';
 
 const breakpoints = [375, 460, 1440];
 
@@ -36,15 +32,11 @@ export const mq = breakpoints.map(
 );
 
 export const app = css`
-  min-height: 200px;
-  padding: 45px 24px 0;
-  background-image: url(${bgMobileLight});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  padding: 45px 24px;
+  background-color: ${colors.lightTheme.veryLightGray};
   ${mq[1]} {
-    min-height: 300px;
-    padding: 78px 24px 0;
-    background-image: url(${bgDesktopLight});
+    padding: 78px 24px 45px;
   }
 `;
