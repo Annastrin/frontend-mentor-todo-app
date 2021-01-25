@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
 import {app} from './App-styles';
-import {tasks} from './data';
 import {Background} from '../Background';
 import {Header} from '../Header';
-import {AddTaskField} from '../AddTaskField';
+import {AddTask} from '../AddTask';
 import {TaskList} from '../TaskList';
 
 const Container = styled.div`
@@ -20,8 +19,8 @@ function App() {
       <Background/>
       <Container>
         <Header/>
-        <AddTaskField/>
-        <TaskList tasks={tasks}/>
+        <AddTask/>
+        <TaskList/>
       </Container>
     </div>
   );

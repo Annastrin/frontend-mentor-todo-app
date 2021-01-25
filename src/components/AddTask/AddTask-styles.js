@@ -19,7 +19,7 @@ export const addTaskForm = css`
   }
 `;
 
-export const addTask = css`
+export const addTaskField = css`
   border: 0;
   border-radius: 5px;
   padding-left: 73px;
@@ -30,4 +30,15 @@ export const addTask = css`
     border-radius: 5px;
     outline: 0;
   }
+`;
+
+export const btnSubmit = css`
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;

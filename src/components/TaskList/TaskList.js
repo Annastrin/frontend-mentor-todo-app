@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { connect } from "react-redux";
 import {taskList} from './TaskList-styles';
 import {Task} from '../Task';
 
@@ -10,4 +11,8 @@ function TaskList(props){
   )
 }
 
-export default TaskList;
+function mapStateToProps(state) {
+  return {tasks: state.tasks};
+}
+
+export default connect(mapStateToProps)(TaskList);
