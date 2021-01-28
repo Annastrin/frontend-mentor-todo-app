@@ -6,7 +6,7 @@ import {Task} from '../Task';
 function TaskList(props){
   return(
     <ul css={taskList}>
-      {props.tasks.map((task, i) => <li key={`task-`+i}><Task taskName={task} taskId={`task-`+i}/></li>)}
+      {props.tasks.map(task => <li key={`task-${task.id}`}><Task taskName={task.name} taskId={task.id}/></li>)}
     </ul>
   )
 }

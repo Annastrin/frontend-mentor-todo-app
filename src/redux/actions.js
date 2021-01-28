@@ -1,4 +1,4 @@
-import { ADD_TASK } from './actionTypes'
+import { ADD_TASK, REMOVE_TASK } from './actionTypes';
 
 export const addTask = text => ({
   type: ADD_TASK,
@@ -6,3 +6,10 @@ export const addTask = text => ({
     text
   }
 });
+
+export const removeTask = text => ({
+  type: REMOVE_TASK,
+  payload: {
+    text
+  }
+})
