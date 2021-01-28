@@ -6,7 +6,7 @@ export const colors = {
   primary: {
     white: 'hsl(0, 0%, 100%)',
     brightBlue: 'hsl(220, 98%, 61%)',
-    checkBackground: 'linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)'
+    checkBackground: 'linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))'
   },
   lightTheme: {
     veryLightGray: 'hsl(0, 0%, 98%)',
@@ -36,7 +36,8 @@ export const app = css`
   min-height: 100vh;
   padding: 45px 24px;
   background-color: ${colors.lightTheme.veryLightGray};
+  color: ${colors.lightTheme.veryDarkGrayishBlue};
   ${mq[1]} {
-    padding: 78px 24px 45px;
+    padding: 78px 24px 115px;
   }
 `;

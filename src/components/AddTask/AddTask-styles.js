@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { colors } from '../App/App-styles';
 
 export const addTaskForm = css`
   position: relative;
@@ -10,10 +11,11 @@ export const addTaskForm = css`
     position: absolute;
     top: 50%;
     left: 22px;
+    z-index: 1;
     width: 26px;
     height: 26px;
     margin-top: -13px;
-    border: 1px solid grey;
+    border: 1px solid ${colors.lightTheme.veryLightGrayishBlue};
     border-radius: 50%;
     box-sizing: border-box;
   }
@@ -24,6 +26,7 @@ export const addTaskField = css`
   border-radius: 5px;
   padding-left: 73px;
   font-size: 1em;
+  letter-spacing: -0.3px;
 
   &:hover, &:focus {
     border: 0;

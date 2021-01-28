@@ -13,7 +13,7 @@ export const logo = css`
   font-size: 2.2em;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: 14px;
+  letter-spacing: 15px;
   text-transform: uppercase;
 `;
 
