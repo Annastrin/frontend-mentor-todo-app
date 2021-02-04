@@ -3,17 +3,17 @@ import { colors } from '../App/App-styles';
 
 export const addTaskForm = css`
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   &::before {
     content: '';
     display: block;
     position: absolute;
     top: 50%;
-    left: 22px;
+    left: 24px;
     z-index: 1;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     margin-top: -13px;
     border: 1px solid ${colors.lightTheme.veryLightGrayishBlue};
     border-radius: 50%;
