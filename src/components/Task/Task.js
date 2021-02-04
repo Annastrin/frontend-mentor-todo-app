@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useRef } from 'react';
 import { connect } from 'react-redux';
-import { removeTask } from '../../redux/actions';
+import { removeTask, toggleTaskState } from '../../redux/actions';
 import {task, taskContent, checkmark, removeTaskBtn} from './Task-styles';
 import {ReactComponent as IconCross} from './images/icon-cross.svg';
 
@@ -9,12 +9,16 @@ function Task(props){
   const currentTask = useRef(null);
 
   const handleRemove = () => {
-    props.removeTask(currentTask.current.name);
+    props.removeTask(currentTask.current.id);
+  }
+
+  const handleClick = () => {
+    props.toggleTaskState(currentTask.current.id, !props.completed);
   }
 
   return(
     <div css={task}>
-      <input type="checkbox" id={props.taskId} name={props.taskName} ref={currentTask}/>
+      <input type="checkbox" defaultChecked={props.completed} id={props.taskId} name={props.taskName} ref={currentTask} onClick={handleClick}/>
       <label htmlFor={props.taskId} css={taskContent}>
         <span css={checkmark}></span>
         {props.taskName}
@@ -26,7 +30,8 @@ function Task(props){
 
 function mapDispatchToProps(dispatch) {
   return {
-    removeTask: (name) => {dispatch(removeTask(name))}
+    removeTask: (id) => {dispatch(removeTask(id))},
+    toggleTaskState: (id, taskState) => {dispatch(toggleTaskState(id, taskState))}
   };
 }
 
