@@ -45,6 +45,7 @@ export const taskContent = css`
   display: block;
   overflow: hidden;
   cursor: pointer;
+  color: ${colors.lightTheme.veryDarkGrayishBlue};
 
   input:checked ~ & {
     color: ${colors.lightTheme.lightGrayishBlue};
