@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import { actionBar, leftItems, filters, filterBtn, activeFilterBtn, clearCompletedBtn } from './TaskFilters-styles';
 
-function TaskFilters(props){
+export function TaskFilters(props){
   const [activeFilter, setActiveFilter] = useState("showAll");
 
   const showAll = () => {
