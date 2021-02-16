@@ -5,7 +5,7 @@ import { addTask } from '../../redux/actions';
 import { addTaskForm, addTaskField, btnSubmit } from './AddTask-styles';
 import { task } from '../Task/Task-styles';
 
-function AddTask(props){
+export function AddTask(props){
   const [value, setValue] = useState("");
 
   const handleChange = e => {
@@ -14,7 +14,7 @@ function AddTask(props){
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addTask(value);
+    props.onAddTask(value);
     setValue("");
   };
 
@@ -33,7 +33,7 @@ function AddTask(props){
 
 function mapDispatchToProps(dispatch) {
   return {
-    addTask: (value) => {dispatch(addTask(value))}
+    onAddTask: (value) => {dispatch(addTask(value))}
   };
 }
 
