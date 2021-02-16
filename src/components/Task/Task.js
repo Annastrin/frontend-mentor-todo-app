@@ -1,7 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { useRef } from 'react';
-import { connect } from 'react-redux';
-import { removeTask, toggleTaskState } from '../../redux/actions';
 import {task, taskContent, checkmark, removeTaskBtn} from './Task-styles';
 import {ReactComponent as IconCross} from './images/icon-cross.svg';
 
@@ -28,11 +26,4 @@ export function Task(props){
   )
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onRemoveTask: (id) => {dispatch(removeTask(id))},
-    onToggleTaskState: (id, taskState) => {dispatch(toggleTaskState(id, taskState))}
-  };
-}
-
-export default connect(null, mapDispatchToProps)(Task);
+export default Task;
