@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { connect } from "react-redux";
 import {taskList} from './TaskList-styles';
-import {Task} from '../Task';
+import {Task} from '../Task/Task';
 import {TaskFilters} from '../TaskFilters';
 
-function TaskList(props){
+export function TaskList(props){
   const activeTasksNumber = props.tasks.filter(task => !task.completed).length;
 
   return(
