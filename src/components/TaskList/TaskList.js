@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { connect } from "react-redux";
-import { removeTask, toggleTaskState } from '../../redux/actions';
+import { removeTask, toggleTaskState, clearCompletedTasks } from '../../redux/actions';
 import {taskList} from './TaskList-styles';
 import {Task} from '../Task';
 import {TaskFilters} from '../TaskFilters';
@@ -20,7 +20,11 @@ export function TaskList(props){
             onRemoveTask={props.onRemoveTask}/>
         </li>
       ))}
-      <TaskFilters tasksNumber={activeTasksNumber}/>
+      {props.tasks.length > 0 &&
+        <TaskFilters
+          tasksNumber={activeTasksNumber}
+          onClearCompleted={props.onClearCompleted}/>
+      }
     </ul>
   )
 }
@@ -32,7 +36,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onRemoveTask: (id) => {dispatch(removeTask(id))},
-    onToggleTaskState: (id, taskState) => {dispatch(toggleTaskState(id, taskState))}
+    onToggleTaskState: (id, taskState) => {dispatch(toggleTaskState(id, taskState))},
+    onClearCompleted: () => {dispatch(clearCompletedTasks())}
   };
 }
 

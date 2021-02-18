@@ -1,4 +1,4 @@
-import { ADD_TASK, REMOVE_TASK, TOGGLE_TASK_STATE } from './actionTypes';
+import { ADD_TASK, REMOVE_TASK, TOGGLE_TASK_STATE, CLEAR_COMPLETED_TASKS } from './actionTypes';
 
 export const addTask = text => ({
   type: ADD_TASK,
@@ -20,4 +20,8 @@ export const toggleTaskState = (id, taskState) => ({
     id,
     taskState
   }
+});
+
+export const clearCompletedTasks = () => ({
+  type: CLEAR_COMPLETED_TASKS
 });

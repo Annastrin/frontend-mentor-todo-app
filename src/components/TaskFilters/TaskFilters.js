@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from 'react';
-import { connect } from 'react-redux';
 import { actionBar, leftItems, filters, filterBtn, activeFilterBtn, clearCompletedBtn } from './TaskFilters-styles';
 
 export function TaskFilters(props){
@@ -17,7 +16,7 @@ export function TaskFilters(props){
   };
 
   const clearCompleted = () => {
-
+    props.onClearCompleted();
   };
 
   const filterIsActive = (filterName) => {

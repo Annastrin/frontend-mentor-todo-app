@@ -1,4 +1,4 @@
-import { ADD_TASK, REMOVE_TASK, TOGGLE_TASK_STATE } from '../actionTypes';
+import { ADD_TASK, REMOVE_TASK, TOGGLE_TASK_STATE, CLEAR_COMPLETED_TASKS } from '../actionTypes';
 
 let taskCounter = 0;
 const initialState = {
@@ -29,7 +29,6 @@ function rootReducer(state = initialState, action) {
         })
       }
     case TOGGLE_TASK_STATE:
-      console.log(action.payload.id, action.payload.taskState);
       return {
         tasks: state.tasks.map(task => {
           if (task.id === Number(action.payload.id)) {
@@ -39,6 +38,10 @@ function rootReducer(state = initialState, action) {
           }
         })
       };
+    case CLEAR_COMPLETED_TASKS:
+      return {
+        tasks: state.tasks.filter(task => !task.completed)
+      }
     default:
       return {
         tasks: [...state.tasks]
