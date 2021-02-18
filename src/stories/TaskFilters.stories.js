@@ -5,6 +5,7 @@ export default {
   title: 'TaskFilters',
   component: TaskFilters,
   argTypes: {
+    onClearCompleted: { action: 'clear completed tasks' }
   },
 };
 
