@@ -32,12 +32,6 @@ export const mq = breakpoints.map(
 );
 
 export const app = css`
-  position: relative;
-  min-height: 100vh;
-  padding: 45px 24px;
   background-color: ${colors.lightTheme.veryLightGray};
   color: ${colors.lightTheme.veryDarkGrayishBlue};
-  ${mq[1]} {
-    padding: 78px 24px 115px;
-  }
 `;
