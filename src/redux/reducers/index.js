@@ -18,7 +18,7 @@ const initialState = {
   'Pick up groceries',
   'Complete Todo App on Frontend Mentor'
   ].map(r => ({name: r, id: taskCounter++, completed: false})),
-  filter: 'all'
+  activeFilter: 'all'
 };
 
 function rootReducer(state = initialState, action) {
@@ -53,17 +53,17 @@ function rootReducer(state = initialState, action) {
     case SHOW_ALL_TASKS:
       return {
         ...state,
-        filter: 'all'
+        activeFilter: 'all'
       };
     case SHOW_ACTIVE_TASKS:
       return {
         ...state,
-        filter: 'active'
+        activeFilter: 'active'
       };
     case SHOW_COMPLETED_TASKS:
       return {
         ...state,
-        filter: 'completed'
+        activeFilter: 'completed'
       };
     case CLEAR_COMPLETED_TASKS:
       return {

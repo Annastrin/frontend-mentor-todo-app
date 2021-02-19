@@ -22,7 +22,7 @@ export function TaskList(props){
 
   return(
     <ul css={taskList}>
-      {props.tasks.filter(filterMap[props.filter]).map(task => (
+      {props.tasks.filter(filterMap[props.activeFilter]).map(task => (
         <li key={`task-${task.id}`}>
           <Task
             taskName={task.name}
@@ -34,7 +34,7 @@ export function TaskList(props){
       ))}
       {props.tasks.length > 0 &&
         <TaskFilters
-          activeFilter={props.filter}
+          activeFilter={props.activeFilter}
           tasksNumber={activeTasksNumber}
           onShowAll={props.onShowAll}
           onShowActive={props.onShowActive}
@@ -48,7 +48,7 @@ export function TaskList(props){
 function mapStateToProps(state) {
   return {
     tasks: state.tasks,
-    filter: state.filter
+    activeFilter: state.activeFilter
   };
 }
 
