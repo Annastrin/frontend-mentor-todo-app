@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import styled from '@emotion/styled';
 import {app} from './App-styles';
 import {Layout} from '../Layout';
 import {Header} from '../Header';
