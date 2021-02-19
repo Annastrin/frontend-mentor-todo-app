@@ -8,7 +8,11 @@ export default {
   component: TaskList,
   argTypes: {
     onToggleTaskState: { action: 'clicked' },
-    onRemoveTask: { action: 'removed' }
+    onRemoveTask: { action: 'removed' },
+    onShowAll: {action: 'show all tasks'},
+    onShowActive: {action: 'show active tasks'},
+    onShowCompleted: {action: 'show completed tasks'},
+    onClearCompleted: {action: 'clear completed tasks'}
   },
 };
 
@@ -29,5 +33,6 @@ Default.args = {
       id: 1,
       completed: true
     }
-  ]
+  ],
+  activeFilter: 'all'
 };
