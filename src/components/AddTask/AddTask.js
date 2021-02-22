@@ -14,8 +14,10 @@ export function AddTask(props){
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.onAddTask(value);
-    setValue("");
+    if (value.length > 0) {
+      props.onAddTask(value);
+      setValue("");
+    }
   };
 
   return(
