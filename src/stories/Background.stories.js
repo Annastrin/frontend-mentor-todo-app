@@ -1,6 +1,7 @@
 import React from 'react';
 import {Background} from '../components/Background';
 
+// eslint-disable-next-line
 export default {
   title: 'Background',
   component: Background,

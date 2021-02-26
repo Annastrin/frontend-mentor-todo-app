@@ -2,7 +2,7 @@ import React from 'react';
 import {TaskList} from '../components/TaskList/TaskList';
 import * as TaskStories from './Task.stories';
 
-
+// eslint-disable-next-line
 export default {
   title: 'TaskList',
   component: TaskList,

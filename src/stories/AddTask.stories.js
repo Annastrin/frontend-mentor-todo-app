@@ -1,6 +1,7 @@
 import React from 'react';
 import {AddTask} from '../components/AddTask/AddTask';
 
+// eslint-disable-next-line
 export default {
   title: 'AddTask',
   component: AddTask,

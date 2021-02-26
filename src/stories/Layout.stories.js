@@ -1,6 +1,7 @@
 import React from 'react';
 import {Layout} from '../components/Layout';
 
+// eslint-disable-next-line
 export default {
   title: 'Layout',
   component: Layout,

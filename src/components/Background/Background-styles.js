@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 import {mq} from '../App/App-styles';
 import bgDesktopLight from './images/bg-desktop-light.jpg';
 import bgMobileLight from './images/bg-mobile-light.jpg';
-import bgDesktopDark from './images/bg-desktop-dark.jpg';
-import bgMobileDark from './images/bg-mobile-dark.jpg';
+//import bgDesktopDark from './images/bg-desktop-dark.jpg';
+//import bgMobileDark from './images/bg-mobile-dark.jpg';
 
 export const background = css`
   position: absolute;

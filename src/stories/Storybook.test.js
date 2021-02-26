@@ -1,5 +1,3 @@
-import path from 'path';
-
 import initStoryshots from '@storybook/addon-storyshots';
 
 // the required import from the @storybook/addon-storyshots-puppeteer addon

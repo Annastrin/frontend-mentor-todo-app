@@ -1,6 +1,7 @@
 import React from 'react';
 import {TaskFilters} from '../components/TaskFilters/TaskFilters';
 
+// eslint-disable-next-line
 export default {
   title: 'TaskFilters',
   component: TaskFilters,
