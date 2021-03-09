@@ -20,7 +20,7 @@ export function Task(props){
         type="checkbox"
         checked={props.completed}
         id={props.taskId}
-        name={string2KebabWithId(props.taskName, props.taskId)}
+        name={name2KebabWithId(props.taskName, props.taskId)}
         ref={currentTask}
         onChange={handleClick}/>
       <label htmlFor={props.taskId} css={taskContent}>
@@ -32,8 +32,8 @@ export function Task(props){
   )
 }
 
-export const string2KebabWithId = (string, id) => {
-  return string.toLowerCase().split(' ').join('-') + '-' + id;
+export const name2KebabWithId = (name, id) => {
+  return name.toLowerCase().split(' ').join('-') + '-' + id;
 };
 
 export default Task;
