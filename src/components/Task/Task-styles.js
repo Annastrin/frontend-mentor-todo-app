@@ -12,6 +12,7 @@ export const removeTaskBtn = css`
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
+  font-size: 0;
 `;
 
 export const task = css`

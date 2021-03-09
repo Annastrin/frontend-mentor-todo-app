@@ -27,7 +27,10 @@ export function Task(props){
         <span css={checkmark}></span>
         {props.taskName}
       </label>
-      <button css={removeTaskBtn} onClick={handleRemove}><IconCross/></button>
+      <button css={removeTaskBtn} onClick={handleRemove} data-testid={name2KebabWithId(props.taskName, props.taskId)}>
+        <IconCross/>
+        <span>Remove</span>
+      </button>
     </div>
   )
 }
