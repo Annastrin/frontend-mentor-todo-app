@@ -1,7 +1,24 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: '10.4'
+    steps:
+      - run: npm install
+      - run: npm run build
+  test:
+    executor:
+      name: node/default
+      tag: '10.4'
+    steps:
+      - run: npm run storybook
+      - run: npm run test
+      - run: npm run lint
 workflows:
-  node-tests:
+  build_and_test:
     jobs:
-      - node/test
+      - build
+      - test
