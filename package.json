@@ -28,7 +28,9 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:testing-library/react",
+      "plugin:jest-dom/recommended"
     ]
   },
   "browserslist": {
@@ -54,6 +56,8 @@
     "@storybook/react": "^6.1.18",
     "chromatic": "^5.6.3",
     "eslint": "^7.20.0",
+    "eslint-plugin-jest-dom": "^3.6.5",
+    "eslint-plugin-testing-library": "^3.10.1",
     "puppeteer": "^7.1.0"
   }
 }
