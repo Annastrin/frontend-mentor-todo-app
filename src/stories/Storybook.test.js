@@ -1,3 +1,4 @@
+import path from 'path';
 import initStoryshots from '@storybook/addon-storyshots';
 
 // the required import from the @storybook/addon-storyshots-puppeteer addon
@@ -7,6 +8,6 @@ initStoryshots({
     // your own configuration
     test: imageSnapshot({
         // invoke the function above here
-        storybookUrl: 'http://localhost:6006'
+        storybookUrl: `file://${path.resolve(__dirname, '../../storybook-static')}`
     })
 });

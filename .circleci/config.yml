@@ -1,20 +1,25 @@
 version: 2.1
 orbs:
-  node: circleci/node@3.0.0
+  node: circleci/node@4.2.0
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: '10.4'
+    docker:
+      - image: cimg/node:15.11.0
     steps:
-      - run: npm install
+      - checkout
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
       - run: npm run build
   test:
-    executor:
-      name: node/default
-      tag: '10.4'
+    docker:
+      - image: cimg/node:15.11.0-browsers
     steps:
-      - run: npm run storybook
+      - checkout
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
+      - run: npm run build-storybook
       - run: npm run test
       - run: npm run lint
 workflows:
