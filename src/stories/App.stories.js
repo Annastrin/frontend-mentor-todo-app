@@ -1,16 +1,10 @@
-import { storiesOf } from '@storybook/react';
-import Provider from './Provider';
-import store from '../redux/store';
-import {App} from '../components/App';
+import { storiesOf } from "@storybook/react";
+import Provider from "./Provider";
+import { store } from "../redux/store";
+import { App } from "../components/App";
 
-const withProvider = (story) => (
-  <Provider store={store}>
-    { story() }
-  </Provider>
-);
+const withProvider = (story) => <Provider store={store}>{story()}</Provider>;
 
-storiesOf('App', module)
+storiesOf("App", module)
   .addDecorator(withProvider)
-  .add('default', () => (
-    <App/>
-  ));
+  .add("default", () => <App />);
