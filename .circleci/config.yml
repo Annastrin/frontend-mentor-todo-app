@@ -10,6 +10,7 @@ jobs:
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
+          cache-version: v2
       - run: npm run build
   test:
     docker:
@@ -19,6 +20,7 @@ jobs:
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
+          cache-version: v2
       - run: npm run build-storybook
       - run: npm run test
       - run: npm run lint
