@@ -10,18 +10,14 @@ import {
 } from "../../redux/actions";
 import { taskList } from "./TaskList-styles";
 import { Task, TaskCallbacks } from "../Task";
-import { TaskFilters } from "../TaskFilters";
+import { TaskFilters, TaskFiltersCallbacks } from "../TaskFilters";
 import { State, StateTask } from "../../redux/reducers";
 import { AppDispatch } from "../../redux/store";
 
 interface TaskListProps
   extends Pick<State, "tasks" | "activeFilter">,
-    TaskCallbacks {
-  onShowAll: () => void;
-  onShowActive: () => void;
-  onShowCompleted: () => void;
-  onClearCompleted: () => void;
-}
+    TaskCallbacks,
+    TaskFiltersCallbacks {}
 
 export function TaskList(props: TaskListProps) {
   const activeTasksNumber = props.tasks.filter((task) => !task.completed)
