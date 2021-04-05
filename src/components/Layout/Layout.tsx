@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 interface LayoutProps {
-  children: JSX.Element;
+  children: JSX.Element[];
 }
 
 function Layout({ children }: LayoutProps) {
