@@ -6,7 +6,7 @@ import { AppDispatch } from "../../redux/store";
 import { addTaskForm, addTaskField, btnSubmit } from "./AddTask-styles";
 import { task } from "../Task/Task-styles";
 
-interface AddTaskProps {
+export interface AddTaskProps {
   onAddTask: (value: string) => void;
 }
 

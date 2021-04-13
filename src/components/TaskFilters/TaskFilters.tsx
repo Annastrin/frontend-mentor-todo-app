@@ -15,7 +15,7 @@ export interface TaskFiltersCallbacks {
   onClearCompleted: () => void;
 }
 
-interface TaskFiltersProps extends TaskFiltersCallbacks {
+export interface TaskFiltersProps extends TaskFiltersCallbacks {
   activeFilter: "all" | "active" | "completed";
   tasksNumber: number;
 }

@@ -14,7 +14,7 @@ import { TaskFilters, TaskFiltersCallbacks } from "../TaskFilters";
 import { State, StateTask } from "../../redux/reducers";
 import { AppDispatch } from "../../redux/store";
 
-interface TaskListProps
+export interface TaskListProps
   extends Pick<State, "tasks" | "activeFilter">,
     TaskCallbacks,
     TaskFiltersCallbacks {}

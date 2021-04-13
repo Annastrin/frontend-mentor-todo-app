@@ -10,11 +10,11 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-interface LayoutProps {
+export interface LayoutProps {
   children: JSX.Element[];
 }
 
-function Layout({ children }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   return (
     <div css={layout}>
       <Background />

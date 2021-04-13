@@ -8,7 +8,7 @@ export interface TaskCallbacks {
   onToggleTaskState: (id: number, taskState: boolean) => void;
 }
 
-interface TaskProps extends TaskCallbacks {
+export interface TaskProps extends TaskCallbacks {
   taskName: string;
   taskId: number;
   completed: boolean;
