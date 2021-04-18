@@ -1,17 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import {app} from './App-styles';
-import {Layout} from '../Layout';
-import {Header} from '../Header';
-import {AddTask} from '../AddTask';
-import {TaskList} from '../TaskList';
+import { app } from "./App-styles";
+import { Layout } from "../Layout";
+import { Header } from "../Header";
+import { AddTask } from "../AddTask";
+import { TaskList } from "../TaskList";
 
-function App() {
+export function App() {
   return (
     <div css={app}>
       <Layout>
-        <Header/>
-        <AddTask/>
-        <TaskList/>
+        <Header />
+        <AddTask />
+        <TaskList />
       </Layout>
     </div>
   );
