@@ -1,7 +1,7 @@
 import { Story } from "@storybook/react";
 import { TaskList, TaskListProps } from "../components/TaskList/TaskList";
 
-// eslint-disable-next-line
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "TaskList",
   component: TaskList,

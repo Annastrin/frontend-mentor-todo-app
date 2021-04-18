@@ -1,7 +1,7 @@
 import { Story } from "@storybook/react";
 import { Background } from "../components/Background";
 
-// eslint-disable-next-line
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Background",
   component: Background,

@@ -4,7 +4,7 @@ import {
   TaskFiltersProps,
 } from "../components/TaskFilters/TaskFilters";
 
-// eslint-disable-next-line
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "TaskFilters",
   component: TaskFilters,
