@@ -28,7 +28,8 @@ export const addTaskField = css`
   font-size: 1em;
   letter-spacing: -0.3px;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border: 0;
     border-radius: 5px;
     outline: 0;
