@@ -11,8 +11,8 @@ function Header(props: HeaderProps) {
   return (
     <header css={header}>
       <div css={logo}>Todo</div>
-      <button css={themeSwitcher}>
-        <IconMoon />
+      <button type="button" css={themeSwitcher}>
+        Switch theme
       </button>
     </header>
   );
