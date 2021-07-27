@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useRef } from "react";
 import { task, taskContent, checkmark, removeTaskBtn } from "./Task-styles";
-import { ReactComponent as IconCross } from "./images/icon-cross.svg";
 
 export interface TaskCallbacks {
   onRemoveTask: (id: number) => void;
@@ -47,12 +46,12 @@ export function Task(props: TaskProps) {
         {props.taskName}
       </label>
       <button
+        type="button"
         css={removeTaskBtn}
         onClick={handleRemove}
         data-testid={name2KebabWithId(props.taskName, props.taskId)}
       >
-        <IconCross />
-        <span>Remove</span>
+        Delete
       </button>
     </div>
   );
