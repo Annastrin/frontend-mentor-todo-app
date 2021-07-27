@@ -29,18 +29,20 @@ export function TaskList(props: TaskListProps) {
   };
 
   return (
-    <ul css={taskList}>
-      {props.tasks.filter(filterMap[props.activeFilter]).map((task) => (
-        <li key={`task-${task.id}`}>
-          <Task
-            taskName={task.name}
-            taskId={task.id}
-            completed={task.completed}
-            onToggleTaskState={props.onToggleTaskState}
-            onRemoveTask={props.onRemoveTask}
-          />
-        </li>
-      ))}
+    <div css={taskList}>
+      <ul>
+        {props.tasks.filter(filterMap[props.activeFilter]).map((task) => (
+          <li key={`task-${task.id}`}>
+            <Task
+              taskName={task.name}
+              taskId={task.id}
+              completed={task.completed}
+              onToggleTaskState={props.onToggleTaskState}
+              onRemoveTask={props.onRemoveTask}
+            />
+          </li>
+        ))}
+      </ul>
       {props.tasks.length > 0 && (
         <TaskFilters
           activeFilter={props.activeFilter}
@@ -51,7 +53,7 @@ export function TaskList(props: TaskListProps) {
           onClearCompleted={props.onClearCompleted}
         />
       )}
-    </ul>
+    </div>
   );
 }
 
