@@ -1,32 +1,50 @@
 import { css } from '@emotion/react';
-import { colors } from '../App/App-styles';
+import { colors, mq } from '../App/App-styles';
 
 export const addTaskForm = css`
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
+
+  ${mq[1]} {
+    margin-bottom: 23px;
+  }
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 50%;
-    left: 24px;
+    left: 20px;
     z-index: 1;
-    width: 24px;
-    height: 24px;
-    margin-top: -13px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
     border: 1px solid ${colors.lightTheme.veryLightGrayishBlue};
     border-radius: 50%;
     box-sizing: border-box;
+
+    ${mq[1]} {
+      left: 24px;
+      width: 24px;
+      height: 24px;
+      margin-top: -13px;
+    }
   }
 `;
 
 export const addTaskField = css`
+  height: 50px;
   border: 0;
   border-radius: 5px;
-  padding-left: 73px;
+  padding-left: 52px;
   font-size: 1em;
-  letter-spacing: -0.3px;
+  letter-spacing: -.2px;
+
+  ${mq[1]} {
+    height: 65px;
+    padding-left: 73px;
+    letter-spacing: -.3px;
+  }
 
   &:hover,
   &:focus {
