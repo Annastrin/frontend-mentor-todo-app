@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { mq } from '../App/App-styles';
+import { mq } from '../../style-guide';
 
 export const layout = css`
   position: relative;

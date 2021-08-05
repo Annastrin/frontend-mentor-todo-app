@@ -1,16 +1,16 @@
 import { css } from '@emotion/react';
-import {colors, mq} from '../App/App-styles';
+import {colors, mq} from '../../style-guide';
 
 export const actionBar = css`
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-bottom: 65px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   padding: 17px 20px;
   font-size: 12px;
-  background-color: ${colors.primary.white};
-  color: ${colors.lightTheme.darkGrayishBlue};
+  background-color: ${colors.lightTheme.filtersBgColor};
+  color: ${colors.lightTheme.filtersTextColor};
   letter-spacing: -.1px;
 
   ${mq[1]} {
@@ -47,9 +47,9 @@ export const filters = css`
   height: 48px;
   left: 0;
   right: 0;
-  background-color: ${colors.primary.white};
+  background-color: ${colors.lightTheme.filtersBgColor};
   border-radius: 5px;
-  box-shadow: 0 30px 30px 1px ${colors.lightTheme.veryLightGrayishBlue};
+  box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
 
   ${mq[1]} {
     position: static;
@@ -61,14 +61,14 @@ export const filters = css`
 
 export const filterBtn = css`
   margin: 0 8px;
-  color: ${colors.lightTheme.darkGrayishBlue};
+  color: ${colors.lightTheme.filtersTextColor};
   font-weight: 700;
   cursor: pointer;
   transition: color .3s;
 
   &:hover,
   &:active {
-    color: ${colors.lightTheme.veryDarkGrayishBlue};
+    color: ${colors.lightTheme.textColor};
   }
 
   &:first-of-type {
@@ -81,13 +81,13 @@ export const filterBtn = css`
 `;
 
 export const activeFilterBtn = css`
-  color: ${colors.primary.brightBlue};
+  color: ${colors.activeFilterColor};
 `;
 
 export const clearCompletedBtn = css`
   width: 100%;
   max-width: 105px;
-  color: ${colors.lightTheme.darkGrayishBlue};
+  color: ${colors.lightTheme.filtersTextColor};
   cursor: pointer;
   font-size: 12px;
   letter-spacing: -.1px;
@@ -100,6 +100,6 @@ export const clearCompletedBtn = css`
 
   &:hover,
   &:active {
-    color: ${colors.lightTheme.veryDarkGrayishBlue};
+    color: ${colors.lightTheme.textColor};
   }
 `;

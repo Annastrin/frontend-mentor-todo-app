@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { colors, mq } from '../App/App-styles';
+import { colors, mq } from '../../style-guide';
 import moonIcon from './images/icon-moon.svg';
 
 export const header = css`
@@ -14,7 +14,7 @@ export const header = css`
 
 export const logo = css`
   height: 30px;
-  color: ${colors.primary.white};
+  color: ${colors.logoColor};
   font-size: 2.2em;
   font-weight: 700;
   line-height: 1;

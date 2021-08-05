@@ -1,37 +1,34 @@
 import { css } from '@emotion/react';
+import { colors, mq } from '../../style-guide';
 
-const breakpoints = [375, 460, 1440];
+export const globalStyles = css`
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
-export const colors = {
-  primary: {
-    white: 'hsl(0, 0%, 100%)',
-    brightBlue: 'hsl(220, 98%, 61%)',
-    checkBackground: 'linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))'
-  },
-  lightTheme: {
-    veryLightGray: 'hsl(0, 0%, 98%)',
-    veryLightGrayishBlue: 'hsl(236, 33%, 92%)',
-    lightGrayishBlue: 'hsl(233, 11%, 84%)',
-    darkGrayishBlue: 'hsl(236, 9%, 61%)',
-    veryDarkGrayishBlue: 'hsl(235, 19%, 35%)'
-  },
-  darkTheme: {
-    veryDarkBlue: 'hsl(235, 21%, 11%)',
-    veryDarkDesaturatedBlue: 'hsl(235, 24%, 19%)',
-    lightGrayishBlue: 'hsl(234, 39%, 85%)',
-    lightGrayishBlueHover: 'hsl(236, 33%, 92%)',
-    darkGrayishBlue: 'hsl(234, 11%, 52%)',
-    veryDarkGrayishBlue: 'hsl(233, 14%, 35%)',
-    veryDarkGrayishBlue2: 'hsl(237, 14%, 26%)'
+  * {
+    box-sizing: border-box;
   }
-};
 
+  body {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-export const mq = breakpoints.map(
-  bp => `@media (min-width: ${bp}px)`
-);
+  input {
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  ${mq[1]} {
+
+    body {
+      font-size: 18px;
+    }
+  }
+`;
 
 export const app = css`
-  background-color: ${colors.lightTheme.veryLightGray};
-  color: ${colors.lightTheme.veryDarkGrayishBlue};
+  background-color: ${colors.lightTheme.bgColor};
+  color: ${colors.lightTheme.textColor};
 `;

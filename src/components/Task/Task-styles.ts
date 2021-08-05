@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import {colors, mq} from '../App/App-styles';
+import {colors, mq} from '../../style-guide';
 import checkIcon from './images/icon-check.svg';
 import crossIcon from './images/icon-cross.svg';
 
@@ -33,9 +33,9 @@ export const task = css`
   height: 53px;
   max-width: 100%;
   width: 100%;
-  border-bottom: 1px solid ${colors.lightTheme.veryLightGrayishBlue};
+  border-bottom: 1px solid ${colors.lightTheme.taskBorder};
   padding: 10px 12px 10px 52px;
-  background-color: ${colors.primary.white};
+  background-color: ${colors.lightTheme.taskBgColor};
   letter-spacing: -.2px;
 
   ${mq[1]} {
@@ -64,13 +64,13 @@ export const task = css`
 export const taskContent = css`
   display: block;
   max-height: 100%;
-  color: ${colors.lightTheme.veryDarkGrayishBlue};
+  color: ${colors.lightTheme.textColor};
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
 
   input:checked ~ & {
-    color: ${colors.lightTheme.lightGrayishBlue};
+    color: ${colors.lightTheme.completedTaskTextColor};
     text-decoration: line-through;
   }
 `;
@@ -82,7 +82,7 @@ export const checkmark = css`
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  border: 1px solid ${colors.lightTheme.veryLightGrayishBlue};
+  border: 1px solid ${colors.lightTheme.checkboxBorder};
   border-radius: 50%;
   background-color: transparent;
 
@@ -102,11 +102,17 @@ export const checkmark = css`
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background-color: ${colors.primary.white};
+      background-color: ${colors.lightTheme.taskBgColor};
     }
 
     input:checked ~ label &::before {
       display: none;
+    }
+
+    input:hover ~ label &,
+    label:hover & {
+      background-image: ${colors.checkBgColor};
+      border: 0;
     }
   }
 
@@ -124,10 +130,8 @@ export const checkmark = css`
     background-position: center;
   }
 
-  input:checked ~ label &,
-  input:hover ~ label &,
-  label:hover & {
-    background-image: ${colors.primary.checkBackground};
+  input:checked ~ label & {
+    background-image: ${colors.checkBgColor};
     border: 0;
   }
 

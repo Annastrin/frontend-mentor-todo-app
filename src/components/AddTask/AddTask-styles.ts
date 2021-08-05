@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { colors, mq } from '../App/App-styles';
+import { colors, mq } from '../../style-guide';
 
 export const addTaskForm = css`
   position: relative;
@@ -19,7 +19,7 @@ export const addTaskForm = css`
     width: 20px;
     height: 20px;
     margin-top: -10px;
-    border: 1px solid ${colors.lightTheme.veryLightGrayishBlue};
+    border: 1px solid ${colors.lightTheme.checkboxBorder};
     border-radius: 50%;
     box-sizing: border-box;
 
@@ -39,6 +39,8 @@ export const addTaskField = css`
   padding-left: 52px;
   font-size: 1em;
   letter-spacing: -.2px;
+  color: ${colors.lightTheme.textColor};
+  caret-color: ${colors.caretColor};
 
   ${mq[1]} {
     height: 65px;

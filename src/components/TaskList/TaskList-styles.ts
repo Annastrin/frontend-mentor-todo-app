@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
-import { colors } from '../App/App-styles';
+import { colors } from '../../style-guide';
 
 export const taskList = css`
   border-radius: 5px;
-  box-shadow: 0 30px 30px 1px ${colors.lightTheme.veryLightGrayishBlue};
+  box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
 
   ul {
     list-style: none;

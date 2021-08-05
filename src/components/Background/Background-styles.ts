@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import {mq} from '../App/App-styles';
+import {mq} from '../../style-guide';
 import bgDesktopLight from './images/bg-desktop-light.jpg';
 import bgMobileLight from './images/bg-mobile-light.jpg';
 //import bgDesktopDark from './images/bg-desktop-dark.jpg';
