@@ -2,7 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import { Story } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { App } from "../components/App/App";
+import { App, AppProps } from "../components/App/App";
 import * as TaskListStories from "./TaskList.stories";
 
 const store: any = {
@@ -37,8 +37,9 @@ export default {
     onShowActive: { action: "show active tasks" },
     onShowCompleted: { action: "show completed tasks" },
     onClearCompleted: { action: "clear completed tasks" },
+    onSwitchTheme: { action: "switch theme" },
   },
 };
 
-const Template: Story = (args) => <App {...args} />;
+const Template: Story<AppProps> = (args) => <App {...args} />;
 export const Default = Template.bind({});

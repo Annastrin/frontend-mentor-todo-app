@@ -3,13 +3,18 @@ import { header } from "./Header-styles";
 import { logo } from "./Header-styles";
 import { themeSwitcher } from "./Header-styles";
 
-interface HeaderProps {}
+export interface HeaderCallback {
+  onSwitchTheme: () => void;
+}
 
-function Header(props: HeaderProps) {
+export function Header(props: HeaderCallback) {
+  const switchTheme = () => {
+    props.onSwitchTheme();
+  };
   return (
     <header css={header}>
       <div css={logo}>Todo</div>
-      <button type="button" css={themeSwitcher}>
+      <button type="button" css={themeSwitcher} onClick={switchTheme}>
         Switch theme
       </button>
     </header>

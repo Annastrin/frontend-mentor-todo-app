@@ -6,6 +6,7 @@ import {
   SHOW_ACTIVE_TASKS,
   SHOW_COMPLETED_TASKS,
   CLEAR_COMPLETED_TASKS,
+  SWITCH_THEME
 } from "../actionTypes";
 import * as actions from "../actions";
 
@@ -20,6 +21,7 @@ export type StateTask = {
 export type State = {
   tasks: StateTask[];
   activeFilter: "all" | "active" | "completed";
+  theme: "lightTheme" | "darkTheme";
 };
 
 const initialState: State = {
@@ -32,6 +34,7 @@ const initialState: State = {
     "Complete Todo App on Frontend Mentor",
   ].map((r) => ({ name: r, id: taskCounter++, completed: false })),
   activeFilter: "all",
+  theme: "lightTheme"
 };
 
 type Action =
@@ -41,7 +44,8 @@ type Action =
   | ReturnType<typeof actions.showAllTasks>
   | ReturnType<typeof actions.showActiveTasks>
   | ReturnType<typeof actions.showCompletedTasks>
-  | ReturnType<typeof actions.clearCompletedTasks>;
+  | ReturnType<typeof actions.clearCompletedTasks>
+  | ReturnType<typeof actions.switchTheme>;
 
 const rootReducer = (state: State = initialState, action: Action): State => {
   switch (action.type) {
@@ -97,6 +101,11 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: state.tasks.filter((task) => !task.completed),
+      };
+    case SWITCH_THEME:
+      return {
+        ...state,
+        theme: state.theme === "lightTheme" ? "darkTheme" : "lightTheme"
       };
     default:
       return state;

@@ -17,6 +17,7 @@ const appInitialState: State = {
     },
   ],
   activeFilter: "all",
+  theme: "lightTheme",
 };
 
 it("should change task checkbox state on click", () => {

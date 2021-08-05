@@ -1,5 +1,5 @@
 import { Story } from "@storybook/react";
-import { Header } from "../components/Header";
+import { Header, HeaderCallback } from "../components/Header/Header";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -15,7 +15,7 @@ export default {
   argTypes: {},
 };
 
-const Template: Story = (args) => <Header {...args} />;
+const Template: Story<HeaderCallback> = (args) => <Header {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

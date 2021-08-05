@@ -5,7 +5,8 @@ import {
   SHOW_ALL_TASKS,
   SHOW_ACTIVE_TASKS,
   SHOW_COMPLETED_TASKS,
-  CLEAR_COMPLETED_TASKS
+  CLEAR_COMPLETED_TASKS,
+  SWITCH_THEME
 } from './actionTypes';
 
 export const addTask = (text: string) => ({
@@ -44,4 +45,8 @@ export const showCompletedTasks = () => ({
 
 export const clearCompletedTasks = () => ({
   type: CLEAR_COMPLETED_TASKS as typeof CLEAR_COMPLETED_TASKS
+});
+
+export const switchTheme = () => ({
+  type: SWITCH_THEME as typeof SWITCH_THEME
 });
