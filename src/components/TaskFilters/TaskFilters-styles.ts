@@ -9,9 +9,18 @@ export const actionBar = css`
   border-radius: 5px;
   padding: 17px 20px;
   font-size: 12px;
-  background-color: ${colors.lightTheme.filtersBgColor};
-  color: ${colors.lightTheme.filtersTextColor};
   letter-spacing: -.1px;
+  transition: all .3s;
+
+  [data-theme="lightTheme"] & {
+    background-color: ${colors.lightTheme.filtersBgColor};
+    color: ${colors.lightTheme.filtersTextColor};
+  }
+
+  [data-theme="darkTheme"] & {
+    background-color: ${colors.darkTheme.filtersBgColor};
+    color: ${colors.darkTheme.filtersTextColor};
+  }
 
   ${mq[1]} {
     display: flex;
@@ -47,28 +56,46 @@ export const filters = css`
   height: 48px;
   left: 0;
   right: 0;
-  background-color: ${colors.lightTheme.filtersBgColor};
   border-radius: 5px;
-  box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
+  transition: all .3s;
+
+  [data-theme="lightTheme"] & {
+    background-color: ${colors.lightTheme.filtersBgColor};
+    box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
+  }
+
+  [data-theme="darkTheme"] & {
+    background-color: ${colors.darkTheme.filtersBgColor};
+    box-shadow: 0 30px 30px 1px ${colors.darkTheme.boxShadowColor};
+  }
 
   ${mq[1]} {
     position: static;
     height: auto;
     border-radius: 0;
-    box-shadow: none;
+
+    [data-theme="lightTheme"] &,
+    [data-theme="darkTheme"] & {
+      box-shadow: none;
+    }
   }
 `;
 
 export const filterBtn = css`
   margin: 0 8px;
-  color: ${colors.lightTheme.filtersTextColor};
   font-weight: 700;
+  color: inherit;
   cursor: pointer;
   transition: color .3s;
 
-  &:hover,
-  &:active {
+  [data-theme="lightTheme"] &:hover,
+  [data-theme="lightTheme"] &:active {
     color: ${colors.lightTheme.textColor};
+  }
+
+  [data-theme="darkTheme"] &:hover,
+  [data-theme="darkTheme"] &:active {
+    color: ${colors.darkTheme.textColor};
   }
 
   &:first-of-type {
@@ -87,7 +114,7 @@ export const activeFilterBtn = css`
 export const clearCompletedBtn = css`
   width: 100%;
   max-width: 105px;
-  color: ${colors.lightTheme.filtersTextColor};
+  color: inherit;
   cursor: pointer;
   font-size: 12px;
   letter-spacing: -.1px;
@@ -98,8 +125,13 @@ export const clearCompletedBtn = css`
     font-size: 14px;
   }
 
-  &:hover,
-  &:active {
+  [data-theme="lightTheme"] &:hover,
+  [data-theme="lightTheme"] &:active {
     color: ${colors.lightTheme.textColor};
+  }
+
+  [data-theme="darkTheme"] &:hover,
+  [data-theme="darkTheme"] &:active {
+    color: ${colors.darkTheme.textColor};
   }
 `;

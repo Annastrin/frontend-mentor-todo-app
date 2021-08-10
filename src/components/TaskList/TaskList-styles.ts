@@ -3,7 +3,15 @@ import { colors } from '../../style-guide';
 
 export const taskList = css`
   border-radius: 5px;
-  box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
+  transition: box-shadow .3s;
+
+  [data-theme="lightTheme"] & {
+    box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
+  }
+
+  [data-theme="darkTheme"] & {
+    box-shadow: 0 30px 30px 1px ${colors.darkTheme.boxShadowColor};
+  }
 
   ul {
     list-style: none;

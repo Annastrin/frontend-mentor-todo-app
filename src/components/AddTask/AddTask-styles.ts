@@ -19,9 +19,17 @@ export const addTaskForm = css`
     width: 20px;
     height: 20px;
     margin-top: -10px;
-    border: 1px solid ${colors.lightTheme.checkboxBorder};
     border-radius: 50%;
     box-sizing: border-box;
+    transition: border .3s;
+
+    [data-theme="lightTheme"] & {
+      border: 1px solid ${colors.lightTheme.checkboxBorder};
+    }
+
+    [data-theme="darkTheme"] & {
+      border: 1px solid ${colors.darkTheme.checkboxBorder};
+    }
 
     ${mq[1]} {
       left: 24px;
@@ -39,8 +47,16 @@ export const addTaskField = css`
   padding-left: 52px;
   font-size: 1em;
   letter-spacing: -.2px;
-  color: ${colors.lightTheme.textColor};
   caret-color: ${colors.caretColor};
+  transition: color .3s;
+
+  [data-theme="lightTheme"] & {
+    color: ${colors.lightTheme.textColor};
+  }
+
+  [data-theme="darkTheme"] & {
+    color: ${colors.darkTheme.textColor};
+  }
 
   ${mq[1]} {
     height: 65px;

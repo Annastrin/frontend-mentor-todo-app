@@ -6,15 +6,18 @@ import { Layout } from "../Layout";
 import { Header } from "../Header";
 import { AddTask } from "../AddTask";
 import { TaskList } from "../TaskList";
+import { State } from "../../redux/reducers";
 import { switchTheme } from "../../redux/actions";
 import { AppDispatch } from "../../redux/store";
 import { HeaderCallback } from "../Header";
 
-export interface AppProps extends HeaderCallback {}
+export interface AppProps extends HeaderCallback {
+  theme: "lightTheme" | "darkTheme";
+}
 
 export function App(props: AppProps) {
   return (
-    <div css={app}>
+    <div css={app} data-theme={props.theme}>
       <Global styles={globalStyles} />
       <Layout>
         <Header onSwitchTheme={props.onSwitchTheme} />
@@ -25,6 +28,12 @@ export function App(props: AppProps) {
   );
 }
 
+function mapStateToProps(state: State): Pick<State, "theme"> {
+  return {
+    theme: state.theme,
+  };
+}
+
 function mapDispatchToProps(dispatch: AppDispatch) {
   return {
     onSwitchTheme: () => {
@@ -33,4 +42,4 @@ function mapDispatchToProps(dispatch: AppDispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

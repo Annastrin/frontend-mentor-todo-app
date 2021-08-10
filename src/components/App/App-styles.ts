@@ -29,6 +29,15 @@ export const globalStyles = css`
 `;
 
 export const app = css`
-  background-color: ${colors.lightTheme.bgColor};
-  color: ${colors.lightTheme.textColor};
+  transition: all .3s;
+
+  &[data-theme="lightTheme"] {
+    background-color: ${colors.lightTheme.bgColor};
+    color: ${colors.lightTheme.textColor};
+  }
+
+  &[data-theme="darkTheme"] {
+    background-color: ${colors.darkTheme.bgColor};
+    color: ${colors.darkTheme.textColor};
+  }
 `;

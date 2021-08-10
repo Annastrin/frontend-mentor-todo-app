@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { colors, mq } from '../../style-guide';
 import moonIcon from './images/icon-moon.svg';
+import sunIcon from './images/icon-sun.svg';
 
 export const header = css`
   display: flex;
@@ -32,13 +33,20 @@ export const themeSwitcher = css`
   border: 0;
   padding: 0;
   background-color: transparent;
-  background-image: url(${moonIcon});
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
   font-size: 0;
   color: transparent;
   cursor: pointer;
+
+  [data-theme="lightTheme"] & {
+    background-image: url(${moonIcon});
+  }
+
+  [data-theme="darkTheme"] & {
+    background-image: url(${sunIcon});
+  }
 
   ${mq[1]} {
     width: 26px;
