@@ -6,10 +6,12 @@ export const taskList = css`
   transition: box-shadow .3s;
 
   [data-theme="lightTheme"] & {
+    background-color: ${colors.lightTheme.taskBgColor};
     box-shadow: 0 30px 30px 1px ${colors.lightTheme.boxShadowColor};
   }
 
   [data-theme="darkTheme"] & {
+    background-color: ${colors.darkTheme.taskBgColor};
     box-shadow: 0 30px 30px 1px ${colors.darkTheme.boxShadowColor};
   }
 
