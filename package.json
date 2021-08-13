@@ -2,6 +2,7 @@
   "name": "todo-app-fm",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://annastrin.github.io/todo_app_for_frontend_mentor/",
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.0.0",
     "@emotion/react": "^11.1.4",
@@ -29,7 +30,9 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "lint": "yarn eslint src/",
-    "lint:css": "stylelint './src/**/*.ts' './src/**/*.tsx'"
+    "lint:css": "stylelint './src/**/*.ts' './src/**/*.tsx'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +67,7 @@
     "eslint": "^7.20.0",
     "eslint-plugin-jest-dom": "^3.6.5",
     "eslint-plugin-testing-library": "^3.10.1",
+    "gh-pages": "^3.2.3",
     "puppeteer": "^7.1.0",
     "stylelint": "^13.12.0",
     "stylelint-config-airbnb": "0.0.0",
