@@ -1,8 +1,8 @@
 {
-  "name": "todo-app-fm",
+  "homepage": "http://annastrin.github.io/todo_app_for_frontend_mentor/",
+  "name": "todo_app_for_frontend_mentor",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://annastrin.github.io/todo_app_for_frontend_mentor/",
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.0.0",
     "@emotion/react": "^11.1.4",
