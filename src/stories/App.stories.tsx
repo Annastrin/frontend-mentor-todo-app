@@ -10,6 +10,7 @@ const store: any = {
     return {
       tasks: TaskListStories.Default.args?.tasks,
       activeFilter: TaskListStories.Default.args?.activeFilter,
+      theme: "lightTheme",
     };
   },
   subscribe: () => 0,
@@ -18,6 +19,10 @@ const store: any = {
     handler(reduxAction);
   },
 };
+
+interface AppStoryProps extends AppProps {
+  app: boolean;
+}
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -41,5 +46,15 @@ export default {
   },
 };
 
-const Template: Story<AppProps> = (args) => <App {...args} />;
+const Template: Story<AppStoryProps> = (args) => <App {...args} />;
 export const Default = Template.bind({});
+Default.args = {
+  theme: "lightTheme",
+  app: true,
+};
+
+export const Dark = Template.bind({});
+Dark.args = {
+  theme: "darkTheme",
+  app: true,
+};

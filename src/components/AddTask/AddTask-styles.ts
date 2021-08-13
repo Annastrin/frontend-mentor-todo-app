@@ -23,20 +23,20 @@ export const addTaskForm = css`
     box-sizing: border-box;
     transition: border .3s;
 
-    [data-theme="lightTheme"] & {
-      border: 1px solid ${colors.lightTheme.checkboxBorder};
-    }
-
-    [data-theme="darkTheme"] & {
-      border: 1px solid ${colors.darkTheme.checkboxBorder};
-    }
-
     ${mq[1]} {
       left: 24px;
       width: 24px;
       height: 24px;
       margin-top: -13px;
     }
+  }
+
+  [data-theme="lightTheme"] &::before {
+    border: 1px solid ${colors.lightTheme.checkboxBorder};
+  }
+
+  [data-theme="darkTheme"] &::before {
+    border: 1px solid ${colors.darkTheme.checkboxBorder};
   }
 `;
 
@@ -51,10 +51,12 @@ export const addTaskField = css`
   transition: color .3s;
 
   [data-theme="lightTheme"] & {
+    border: 0;
     color: ${colors.lightTheme.textColor};
   }
 
   [data-theme="darkTheme"] & {
+    border: 0;
     color: ${colors.darkTheme.textColor};
   }
 

@@ -1,6 +1,10 @@
 import { Story } from "@storybook/react";
 import { Task, TaskProps } from "../components/Task/Task";
 
+interface TaskStoryProps extends TaskProps {
+  theme: string;
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Task",
@@ -11,13 +15,14 @@ export default {
   },
 };
 
-const Template: Story<TaskProps> = (args) => <Task {...args} />;
+const Template: Story<TaskStoryProps> = (args) => <Task {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   taskName: "Todo",
   taskId: 0,
   completed: false,
+  theme: "lightTheme",
 };
 
 export const Completed = Template.bind({});
@@ -25,4 +30,21 @@ Completed.args = {
   taskName: "Todo",
   taskId: 1,
   completed: true,
+  theme: "lightTheme",
+};
+
+export const Dark = Template.bind({});
+Dark.args = {
+  taskName: "Todo",
+  taskId: 2,
+  completed: false,
+  theme: "darkTheme",
+};
+
+export const DarkCompleted = Template.bind({});
+DarkCompleted.args = {
+  taskName: "Todo",
+  taskId: 3,
+  completed: true,
+  theme: "darkTheme",
 };

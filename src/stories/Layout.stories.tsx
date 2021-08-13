@@ -1,6 +1,10 @@
 import { Story } from "@storybook/react";
 import { Layout, LayoutProps } from "../components/Layout/Layout";
 
+interface LayoutStoryProps extends LayoutProps {
+  theme: string;
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Layout",
@@ -8,7 +12,14 @@ export default {
   argTypes: {},
 };
 
-const Template: Story<LayoutProps> = (args) => <Layout {...args} />;
+const Template: Story<LayoutStoryProps> = (args) => <Layout {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  theme: "lightTheme",
+};
+
+export const Dark = Template.bind({});
+Dark.args = {
+  theme: "darkTheme",
+};

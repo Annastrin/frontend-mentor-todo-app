@@ -13,7 +13,7 @@ export const removeTaskBtn = css`
   background-color: transparent;
   background-image: url(${crossIcon});
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 60% center;
   background-size: 12px;
   cursor: pointer;
   transition: all .3s;
@@ -79,6 +79,7 @@ export const taskContent = css`
   text-overflow: ellipsis;
   line-height: 32px;
   cursor: pointer;
+  color: inherit;
 
   ${mq[1]} {
     line-height: 44px;

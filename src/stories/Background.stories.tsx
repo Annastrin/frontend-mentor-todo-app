@@ -11,4 +11,11 @@ export default {
 const Template: Story = (args) => <Background {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  theme: "lightTheme",
+};
+
+export const Dark = Template.bind({});
+Dark.args = {
+  theme: "darkTheme",
+};
