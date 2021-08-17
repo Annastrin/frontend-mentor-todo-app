@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/todo_app_for_frontend_mentor/static/js/main.2b5f8b12.chunk.js",
-    "main.js.map": "/todo_app_for_frontend_mentor/static/js/main.2b5f8b12.chunk.js.map",
-    "runtime-main.js": "/todo_app_for_frontend_mentor/static/js/runtime-main.dbe47815.js",
-    "runtime-main.js.map": "/todo_app_for_frontend_mentor/static/js/runtime-main.dbe47815.js.map",
-    "static/js/2.8cca5596.chunk.js": "/todo_app_for_frontend_mentor/static/js/2.8cca5596.chunk.js",
-    "static/js/2.8cca5596.chunk.js.map": "/todo_app_for_frontend_mentor/static/js/2.8cca5596.chunk.js.map",
-    "static/js/3.0410eb4f.chunk.js": "/todo_app_for_frontend_mentor/static/js/3.0410eb4f.chunk.js",
-    "static/js/3.0410eb4f.chunk.js.map": "/todo_app_for_frontend_mentor/static/js/3.0410eb4f.chunk.js.map",
+    "main.js": "/todo_app_for_frontend_mentor/static/js/main.2606c391.chunk.js",
+    "main.js.map": "/todo_app_for_frontend_mentor/static/js/main.2606c391.chunk.js.map",
+    "runtime-main.js": "/todo_app_for_frontend_mentor/static/js/runtime-main.686d86f3.js",
+    "runtime-main.js.map": "/todo_app_for_frontend_mentor/static/js/runtime-main.686d86f3.js.map",
+    "static/js/2.731d562d.chunk.js": "/todo_app_for_frontend_mentor/static/js/2.731d562d.chunk.js",
+    "static/js/2.731d562d.chunk.js.map": "/todo_app_for_frontend_mentor/static/js/2.731d562d.chunk.js.map",
+    "static/js/3.25fbb220.chunk.js": "/todo_app_for_frontend_mentor/static/js/3.25fbb220.chunk.js",
+    "static/js/3.25fbb220.chunk.js.map": "/todo_app_for_frontend_mentor/static/js/3.25fbb220.chunk.js.map",
     "index.html": "/todo_app_for_frontend_mentor/index.html",
-    "static/js/2.8cca5596.chunk.js.LICENSE.txt": "/todo_app_for_frontend_mentor/static/js/2.8cca5596.chunk.js.LICENSE.txt",
+    "static/js/2.731d562d.chunk.js.LICENSE.txt": "/todo_app_for_frontend_mentor/static/js/2.731d562d.chunk.js.LICENSE.txt",
     "static/media/bg-desktop-dark.73e47dbb.jpg": "/todo_app_for_frontend_mentor/static/media/bg-desktop-dark.73e47dbb.jpg",
     "static/media/bg-desktop-light.3508d620.jpg": "/todo_app_for_frontend_mentor/static/media/bg-desktop-light.3508d620.jpg",
     "static/media/icon-check.a8fb15d0.svg": "/todo_app_for_frontend_mentor/static/media/icon-check.a8fb15d0.svg",
@@ -18,8 +18,8 @@
     "static/media/icon-sun.910b1f9a.svg": "/todo_app_for_frontend_mentor/static/media/icon-sun.910b1f9a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.dbe47815.js",
-    "static/js/2.8cca5596.chunk.js",
-    "static/js/main.2b5f8b12.chunk.js"
+    "static/js/runtime-main.686d86f3.js",
+    "static/js/2.731d562d.chunk.js",
+    "static/js/main.2606c391.chunk.js"
   ]
 }
