@@ -1,6 +1,6 @@
 {
-  "homepage": "http://annastrin.github.io/todo_app_for_frontend_mentor/",
   "name": "todo_app_for_frontend_mentor",
+  "homepage": "http://annastrin.github.io/todo_app_for_frontend_mentor/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,8 @@
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "storybook-addon-root-attribute": "^1.0.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "gh-pages": "^3.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
