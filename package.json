@@ -34,7 +34,8 @@
     "lint": "yarn eslint src/",
     "lint:css": "stylelint './src/**/*.ts' './src/**/*.tsx'",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
