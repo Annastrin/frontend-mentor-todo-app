@@ -1,6 +1,6 @@
 {
-  "name": "todo_app_for_frontend_mentor",
-  "homepage": "http://annastrin.github.io/todo_app_for_frontend_mentor/",
+  "name": "frontend-mentor-todo-app",
+  "homepage": "http://annastrin.github.io/frontend-mentor-todo-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
