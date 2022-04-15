@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/frontend-mentor-todo-app/static/js/main.55d4368a.chunk.js",
-    "main.js.map": "/frontend-mentor-todo-app/static/js/main.55d4368a.chunk.js.map",
-    "runtime-main.js": "/frontend-mentor-todo-app/static/js/runtime-main.a9cb47be.js",
-    "runtime-main.js.map": "/frontend-mentor-todo-app/static/js/runtime-main.a9cb47be.js.map",
-    "static/js/2.ecda2851.chunk.js": "/frontend-mentor-todo-app/static/js/2.ecda2851.chunk.js",
-    "static/js/2.ecda2851.chunk.js.map": "/frontend-mentor-todo-app/static/js/2.ecda2851.chunk.js.map",
-    "static/js/3.0ff55b37.chunk.js": "/frontend-mentor-todo-app/static/js/3.0ff55b37.chunk.js",
-    "static/js/3.0ff55b37.chunk.js.map": "/frontend-mentor-todo-app/static/js/3.0ff55b37.chunk.js.map",
+    "main.js": "/frontend-mentor-todo-app/static/js/main.af145cb9.chunk.js",
+    "main.js.map": "/frontend-mentor-todo-app/static/js/main.af145cb9.chunk.js.map",
+    "runtime-main.js": "/frontend-mentor-todo-app/static/js/runtime-main.f6a85b4e.js",
+    "runtime-main.js.map": "/frontend-mentor-todo-app/static/js/runtime-main.f6a85b4e.js.map",
+    "static/js/2.141223e4.chunk.js": "/frontend-mentor-todo-app/static/js/2.141223e4.chunk.js",
+    "static/js/2.141223e4.chunk.js.map": "/frontend-mentor-todo-app/static/js/2.141223e4.chunk.js.map",
+    "static/js/3.fc327f5e.chunk.js": "/frontend-mentor-todo-app/static/js/3.fc327f5e.chunk.js",
+    "static/js/3.fc327f5e.chunk.js.map": "/frontend-mentor-todo-app/static/js/3.fc327f5e.chunk.js.map",
     "index.html": "/frontend-mentor-todo-app/index.html",
-    "static/js/2.ecda2851.chunk.js.LICENSE.txt": "/frontend-mentor-todo-app/static/js/2.ecda2851.chunk.js.LICENSE.txt",
+    "static/js/2.141223e4.chunk.js.LICENSE.txt": "/frontend-mentor-todo-app/static/js/2.141223e4.chunk.js.LICENSE.txt",
     "static/media/bg-desktop-dark.73e47dbb.jpg": "/frontend-mentor-todo-app/static/media/bg-desktop-dark.73e47dbb.jpg",
     "static/media/bg-desktop-light.3508d620.jpg": "/frontend-mentor-todo-app/static/media/bg-desktop-light.3508d620.jpg",
     "static/media/icon-check.a8fb15d0.svg": "/frontend-mentor-todo-app/static/media/icon-check.a8fb15d0.svg",
@@ -18,8 +18,8 @@
     "static/media/icon-sun.910b1f9a.svg": "/frontend-mentor-todo-app/static/media/icon-sun.910b1f9a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a9cb47be.js",
-    "static/js/2.ecda2851.chunk.js",
-    "static/js/main.55d4368a.chunk.js"
+    "static/js/runtime-main.f6a85b4e.js",
+    "static/js/2.141223e4.chunk.js",
+    "static/js/main.af145cb9.chunk.js"
   ]
 }
