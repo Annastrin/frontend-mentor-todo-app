@@ -1,6 +1,5 @@
 const breakpoints = [375, 460, 1440];
 
-//TODO: rename colors
 const paleteColors = {
   // Primary Colors
   white: 'hsl(0, 0%, 100%)',

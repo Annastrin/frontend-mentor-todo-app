@@ -20,7 +20,7 @@ const Template: Story<TaskStoryProps> = (args) => <Task {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   taskName: "Todo",
-  taskId: 0,
+  taskId: "Todo-0",
   completed: false,
   theme: "lightTheme",
 };
@@ -28,7 +28,7 @@ Default.args = {
 export const Completed = Template.bind({});
 Completed.args = {
   taskName: "Todo",
-  taskId: 1,
+  taskId: "Todo-1",
   completed: true,
   theme: "lightTheme",
 };
@@ -36,7 +36,7 @@ Completed.args = {
 export const Dark = Template.bind({});
 Dark.args = {
   taskName: "Todo",
-  taskId: 2,
+  taskId: "Todo-2",
   completed: false,
   theme: "darkTheme",
 };
@@ -44,7 +44,7 @@ Dark.args = {
 export const DarkCompleted = Template.bind({});
 DarkCompleted.args = {
   taskName: "Todo",
-  taskId: 3,
+  taskId: "Todo-3",
   completed: true,
   theme: "darkTheme",
 };

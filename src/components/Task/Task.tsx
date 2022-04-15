@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import { task, taskContent, checkmark, removeTaskBtn } from "./Task-styles";
 
 export interface TaskCallbacks {
-  onRemoveTask: (id: number) => void;
-  onToggleTaskState: (id: number, taskState: boolean) => void;
+  onRemoveTask: (id: string) => void;
+  onToggleTaskState: (id: string, taskState: boolean) => void;
 }
 
 export interface TaskProps extends TaskCallbacks {
   taskName: string;
-  taskId: number;
+  taskId: string;
   completed: boolean;
 }
 
@@ -17,17 +17,14 @@ export function Task(props: TaskProps) {
   const currentTask = useRef<HTMLInputElement>(null);
 
   const handleRemove = () => {
-    if (currentTask && currentTask.current && currentTask.current.id) {
-      props.onRemoveTask(parseInt(currentTask.current.id));
+    if (currentTask?.current?.id) {
+      props.onRemoveTask(currentTask.current.id);
     }
   };
 
   const handleClick = () => {
-    if (currentTask && currentTask.current && currentTask.current.id) {
-      props.onToggleTaskState(
-        parseInt(currentTask.current.id),
-        !props.completed
-      );
+    if (currentTask?.current?.id) {
+      props.onToggleTaskState(currentTask.current.id, !props.completed);
     }
   };
 
@@ -36,12 +33,12 @@ export function Task(props: TaskProps) {
       <input
         type="checkbox"
         checked={props.completed}
-        id={props.taskId.toString()}
-        name={name2KebabWithId(props.taskName, props.taskId)}
+        id={props.taskId}
+        name={nameWithId(props.taskName, props.taskId)}
         ref={currentTask}
         onChange={handleClick}
       />
-      <label htmlFor={props.taskId.toString()} css={taskContent}>
+      <label htmlFor={props.taskId} css={taskContent}>
         <span css={checkmark}></span>
         {props.taskName}
       </label>
@@ -49,7 +46,7 @@ export function Task(props: TaskProps) {
         type="button"
         css={removeTaskBtn}
         onClick={handleRemove}
-        data-testid={name2KebabWithId(props.taskName, props.taskId)}
+        data-testid={props.taskId}
       >
         Delete
       </button>
@@ -57,8 +54,8 @@ export function Task(props: TaskProps) {
   );
 }
 
-export const name2KebabWithId = (name: string, id: number) => {
+export const nameWithId = (name: string, id: string) => {
   return name.toLowerCase().split(" ").join("-") + "-" + id;
 };
 
-export default Task;
+export default memo(Task);

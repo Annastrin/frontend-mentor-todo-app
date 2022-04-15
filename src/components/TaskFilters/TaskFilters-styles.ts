@@ -6,7 +6,8 @@ export const actionBar = css`
   justify-content: space-between;
   position: relative;
   margin-bottom: 65px;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 17px 20px;
   font-size: 12px;
   letter-spacing: -.1px;

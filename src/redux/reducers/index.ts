@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import {
   ADD_TASK,
   REMOVE_TASK,
@@ -10,11 +11,9 @@ import {
 } from "../actionTypes";
 import * as actions from "../actions";
 
-let taskCounter = 0;
-
 export type StateTask = {
   name: string;
-  id: number;
+  id: string;
   completed: boolean;
 };
 
@@ -32,7 +31,7 @@ const initialState: State = {
     "Read for 1 hour",
     "Pick up groceries",
     "Complete Todo App on Frontend Mentor",
-  ].map((r) => ({ name: r, id: taskCounter++, completed: false })),
+  ].map((task) => ({ name: task, id: uuidv4(), completed: false })),
   activeFilter: "all",
   theme: "lightTheme"
 };
@@ -53,7 +52,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: [
-          { name: action.payload.text, id: taskCounter++, completed: false },
+          { name: action.payload.text, id: uuidv4(), completed: false },
           ...state.tasks,
         ],
       };
@@ -61,7 +60,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: state.tasks.filter((task) => {
-          if (task.id === Number(action.payload.id)) {
+          if (task.id === action.payload.id) {
             return false;
           }
           return true;
@@ -71,7 +70,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: state.tasks.map((task) => {
-          if (task.id === Number(action.payload.id)) {
+          if (task.id === action.payload.id) {
             return {
               name: task.name,
               id: task.id,
