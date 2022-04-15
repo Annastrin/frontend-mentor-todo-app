@@ -48,7 +48,7 @@ export const addTaskField = css`
   font-size: 1em;
   letter-spacing: -.2px;
   caret-color: ${colors.caretColor};
-  transition: color .3s;
+  transition: all .3s;
 
   [data-theme="lightTheme"] & {
     border: 0;

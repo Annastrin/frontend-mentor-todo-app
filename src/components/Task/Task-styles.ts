@@ -72,6 +72,7 @@ export const task = css`
 
 export const taskContent = css`
   display: block;
+  min-width: 80%;
   max-height: 100%;
   white-space: nowrap;
   overflow: hidden;
