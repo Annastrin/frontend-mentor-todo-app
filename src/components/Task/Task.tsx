@@ -17,14 +17,14 @@ export function Task(props: TaskProps) {
   const currentTask = useRef<HTMLInputElement>(null);
 
   const handleRemove = () => {
-    if (currentTask && currentTask.current && currentTask.current.id) {
+    if (currentTask?.current?.id) {
       props.onRemoveTask(currentTask.current.id);
     }
   };
 
   const handleClick = () => {
     console.log(currentTask?.current?.id);
-    if (currentTask && currentTask.current && currentTask.current.id) {
+    if (currentTask?.current?.id) {
       props.onToggleTaskState(currentTask.current.id, !props.completed);
     }
   };
@@ -35,11 +35,14 @@ export function Task(props: TaskProps) {
         type="checkbox"
         checked={props.completed}
         id={props.taskId}
-        name={props.taskId}
+        name={nameWithId(props.taskName, props.taskId)}
         ref={currentTask}
         onChange={handleClick}
       />
-      <label htmlFor={props.taskId} css={taskContent}>
+      <label
+        htmlFor={nameWithId(props.taskName, props.taskId)}
+        css={taskContent}
+      >
         <span css={checkmark}></span>
         {props.taskName}
       </label>
@@ -55,7 +58,7 @@ export function Task(props: TaskProps) {
   );
 }
 
-export const name2KebabWithId = (name: string, id: string) => {
+export const nameWithId = (name: string, id: string) => {
   return name.toLowerCase().split(" ").join("-") + "-" + id;
 };
 

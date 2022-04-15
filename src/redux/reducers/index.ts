@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import {
   ADD_TASK,
   REMOVE_TASK,
@@ -22,8 +23,6 @@ export type State = {
   theme: "lightTheme" | "darkTheme";
 };
 
-let taskCounter = 0;
-
 const initialState: State = {
   tasks: [
     "Complete online JavaScript course",
@@ -32,7 +31,7 @@ const initialState: State = {
     "Read for 1 hour",
     "Pick up groceries",
     "Complete Todo App on Frontend Mentor",
-  ].map((task) => ({ name: task, id: `${task.split(' ').join('-')}-${taskCounter++}`, completed: false })),
+  ].map((task) => ({ name: task, id: uuidv4(), completed: false })),
   activeFilter: "all",
   theme: "lightTheme"
 };
@@ -53,7 +52,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: [
-          { name: action.payload.text, id: `${action.payload.text.split(' ').join('-')}-${taskCounter++}`, completed: false },
+          { name: action.payload.text, id: uuidv4(), completed: false },
           ...state.tasks,
         ],
       };

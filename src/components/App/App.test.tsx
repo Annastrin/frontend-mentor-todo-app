@@ -1,18 +1,18 @@
 import { customRender, fireEvent, screen } from "./test-utils";
 import App from "./App";
-import { name2KebabWithId } from "../Task/Task";
+import { nameWithId } from "../Task/Task";
 import { State } from "../../redux/reducers";
 
 const appInitialState: State = {
   tasks: [
     {
       name: "Complete online JavaScript course",
-      id: 0,
+      id: "0",
       completed: false,
     },
     {
       name: "Add linter to the project",
-      id: 1,
+      id: "1",
       completed: true,
     },
   ],
@@ -49,7 +49,7 @@ it("should remove a task", () => {
     name: "Add linter to the project",
   });
   const removeBtn = screen.getByTestId(
-    name2KebabWithId("Add linter to the project", 1)
+    nameWithId("Add linter to the project", "1")
   );
   fireEvent.click(removeBtn);
   expect(completedTask).not.toBeInTheDocument();

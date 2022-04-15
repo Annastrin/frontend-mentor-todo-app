@@ -73,7 +73,6 @@ export const task = css`
 export const taskContent = css`
   display: block;
   max-height: 100%;
-  overflow: hidden;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
