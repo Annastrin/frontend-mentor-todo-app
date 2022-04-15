@@ -28,11 +28,13 @@ export function TaskList(props: TaskListProps) {
     completed: (task: StateTask) => task.completed,
   };
 
+  console.log(props.tasks);
+
   return (
     <div css={taskList}>
       <ul>
         {props.tasks.filter(filterMap[props.activeFilter]).map((task) => (
-          <li key={`task-${task.id}`}>
+          <li key={task.id}>
             <Task
               taskName={task.name}
               taskId={task.id}
@@ -58,6 +60,7 @@ export function TaskList(props: TaskListProps) {
 }
 
 function mapStateToProps(state: State): Pick<State, "tasks" | "activeFilter"> {
+  console.log(state);
   return {
     tasks: state.tasks,
     activeFilter: state.activeFilter,
@@ -66,10 +69,10 @@ function mapStateToProps(state: State): Pick<State, "tasks" | "activeFilter"> {
 
 function mapDispatchToProps(dispatch: AppDispatch) {
   return {
-    onRemoveTask: (id: number) => {
+    onRemoveTask: (id: string) => {
       dispatch(removeTask(id));
     },
-    onToggleTaskState: (id: number, taskState: boolean) => {
+    onToggleTaskState: (id: string, taskState: boolean) => {
       dispatch(toggleTaskState(id, taskState));
     },
     onShowAll: () => {

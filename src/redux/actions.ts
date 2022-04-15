@@ -16,14 +16,14 @@ export const addTask = (text: string) => ({
   }
 });
 
-export const removeTask = (id: number) => ({
+export const removeTask = (id: string) => ({
   type: REMOVE_TASK as typeof REMOVE_TASK,
   payload: {
     id
   }
 });
 
-export const toggleTaskState = (id: number, taskState: boolean) => ({
+export const toggleTaskState = (id: string, taskState: boolean) => ({
   type: TOGGLE_TASK_STATE as typeof TOGGLE_TASK_STATE,
   payload: {
     id,

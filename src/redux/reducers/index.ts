@@ -10,11 +10,9 @@ import {
 } from "../actionTypes";
 import * as actions from "../actions";
 
-let taskCounter = 0;
-
 export type StateTask = {
   name: string;
-  id: number;
+  id: string;
   completed: boolean;
 };
 
@@ -24,6 +22,8 @@ export type State = {
   theme: "lightTheme" | "darkTheme";
 };
 
+let taskCounter = 0;
+
 const initialState: State = {
   tasks: [
     "Complete online JavaScript course",
@@ -32,7 +32,7 @@ const initialState: State = {
     "Read for 1 hour",
     "Pick up groceries",
     "Complete Todo App on Frontend Mentor",
-  ].map((r) => ({ name: r, id: taskCounter++, completed: false })),
+  ].map((task) => ({ name: task, id: `${task.split(' ').join('-')}-${taskCounter++}`, completed: false })),
   activeFilter: "all",
   theme: "lightTheme"
 };
@@ -53,7 +53,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: [
-          { name: action.payload.text, id: taskCounter++, completed: false },
+          { name: action.payload.text, id: `${action.payload.text.split(' ').join('-')}-${taskCounter++}`, completed: false },
           ...state.tasks,
         ],
       };
@@ -61,7 +61,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: state.tasks.filter((task) => {
-          if (task.id === Number(action.payload.id)) {
+          if (task.id === action.payload.id) {
             return false;
           }
           return true;
@@ -71,7 +71,7 @@ const rootReducer = (state: State = initialState, action: Action): State => {
       return {
         ...state,
         tasks: state.tasks.map((task) => {
-          if (task.id === Number(action.payload.id)) {
+          if (task.id === action.payload.id) {
             return {
               name: task.name,
               id: task.id,

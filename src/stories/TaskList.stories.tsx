@@ -26,12 +26,12 @@ Default.args = {
   tasks: [
     {
       name: "Todo1",
-      id: 0,
+      id: "Todo1-0",
       completed: false,
     },
     {
       name: "Todo2",
-      id: 1,
+      id: "Todo2-1",
       completed: true,
     },
   ],
@@ -44,12 +44,12 @@ Dark.args = {
   tasks: [
     {
       name: "Todo1",
-      id: 0,
+      id: "Todo1-0",
       completed: false,
     },
     {
       name: "Todo2",
-      id: 1,
+      id: "Todo2-1",
       completed: true,
     },
   ],
