@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import { task, taskContent, checkmark, removeTaskBtn } from "./Task-styles";
 
 export interface TaskCallbacks {
@@ -23,7 +23,6 @@ export function Task(props: TaskProps) {
   };
 
   const handleClick = () => {
-    console.log(currentTask?.current?.id);
     if (currentTask?.current?.id) {
       props.onToggleTaskState(currentTask.current.id, !props.completed);
     }
@@ -39,10 +38,7 @@ export function Task(props: TaskProps) {
         ref={currentTask}
         onChange={handleClick}
       />
-      <label
-        htmlFor={nameWithId(props.taskName, props.taskId)}
-        css={taskContent}
-      >
+      <label htmlFor={props.taskId} css={taskContent}>
         <span css={checkmark}></span>
         {props.taskName}
       </label>
@@ -62,4 +58,4 @@ export const nameWithId = (name: string, id: string) => {
   return name.toLowerCase().split(" ").join("-") + "-" + id;
 };
 
-export default Task;
+export default memo(Task);
