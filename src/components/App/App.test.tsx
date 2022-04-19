@@ -1,6 +1,5 @@
 import { customRender, fireEvent, screen } from "./test-utils";
 import App from "./App";
-import { nameWithId } from "../Task/Task";
 import { State } from "../../redux/reducers";
 
 const appInitialState: State = {
@@ -48,9 +47,7 @@ it("should remove a task", () => {
   const completedTask = screen.getByRole("checkbox", {
     name: "Add linter to the project",
   });
-  const removeBtn = screen.getByTestId(
-    nameWithId("Add linter to the project", "1")
-  );
+  const removeBtn = screen.getByTestId("1");
   fireEvent.click(removeBtn);
   expect(completedTask).not.toBeInTheDocument();
 });

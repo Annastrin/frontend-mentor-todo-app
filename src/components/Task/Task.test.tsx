@@ -28,5 +28,5 @@ it("should call change task state function with proper args", () => {
   fireEvent.click(checkbox);
   expect(mockClick).toHaveBeenCalled();
   expect(mockClick).toHaveBeenCalledTimes(1);
-  expect(mockClick).toHaveBeenCalledWith(0, true);
+  expect(mockClick).toHaveBeenCalledWith("0", true);
 });
