@@ -28,8 +28,6 @@ export function TaskList(props: TaskListProps) {
     completed: (task: StateTask) => task.completed,
   };
 
-  console.log(props.tasks);
-
   return (
     <div css={taskList}>
       <ul>
@@ -60,7 +58,6 @@ export function TaskList(props: TaskListProps) {
 }
 
 function mapStateToProps(state: State): Pick<State, "tasks" | "activeFilter"> {
-  console.log(state);
   return {
     tasks: state.tasks,
     activeFilter: state.activeFilter,
