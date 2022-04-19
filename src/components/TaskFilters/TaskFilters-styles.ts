@@ -11,7 +11,11 @@ export const actionBar = css`
   padding: 17px 20px;
   font-size: 12px;
   letter-spacing: -.1px;
-  transition: all .3s;
+  transition: color .3s, background-color .3s;
+
+  &:only-child {
+    border-radius: 5px;
+  }
 
   [data-theme="lightTheme"] & {
     background-color: ${colors.lightTheme.filtersBgColor};

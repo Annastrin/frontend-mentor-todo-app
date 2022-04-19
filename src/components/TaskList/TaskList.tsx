@@ -30,19 +30,21 @@ export function TaskList(props: TaskListProps) {
 
   return (
     <div css={taskList}>
-      <ul>
-        {props.tasks.filter(filterMap[props.activeFilter]).map((task) => (
-          <li key={task.id}>
-            <Task
-              taskName={task.name}
-              taskId={task.id}
-              completed={task.completed}
-              onToggleTaskState={props.onToggleTaskState}
-              onRemoveTask={props.onRemoveTask}
-            />
-          </li>
-        ))}
-      </ul>
+      {props.tasks.filter(filterMap[props.activeFilter]).length !== 0 && (
+        <ul>
+          {props.tasks.filter(filterMap[props.activeFilter]).map((task) => (
+            <li key={task.id}>
+              <Task
+                taskName={task.name}
+                taskId={task.id}
+                completed={task.completed}
+                onToggleTaskState={props.onToggleTaskState}
+                onRemoveTask={props.onRemoveTask}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
       {props.tasks.length > 0 && (
         <TaskFilters
           activeFilter={props.activeFilter}
